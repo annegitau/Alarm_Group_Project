@@ -2,6 +2,7 @@ package com.example.efuabainson.wakeup;
 
 import android.app.AlarmManager;
 import android.content.Context;
+import android.content.Intent;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Context context;
     Button setalarm;
     Button turnoff;
+    Button chronometer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.context=this;
+        openChronometer();
+
 
         alarm_manager=(AlarmManager)getSystemService(ALARM_SERVICE);
         alarm_time=(TimePicker)findViewById(R.id.clock);
         setalarm=(Button)findViewById(R.id.setalarm);
         turnoff=(Button)findViewById(R.id.turnoff);
+
         final Calendar calendar=Calendar.getInstance();
 
 
@@ -54,11 +59,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+    }
+    public void openChronometer(){
+        chronometer=(Button)findViewById(R.id.chronometer_btn);
+        chronometer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ActivityTwo.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
     public void set_alarm_text(String s){
         Toast.makeText(MainActivity.this, s,Toast.LENGTH_SHORT ).show();
     }
+
 }
