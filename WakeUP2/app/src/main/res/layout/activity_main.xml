@@ -13,30 +13,54 @@
     <TimePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
         android:id="@+id/clock"
         android:numbersSelectorColor="@android:color/holo_green_dark"
-        android:headerBackground="@android:color/holo_green_light" />
+        android:headerBackground="@android:color/holo_green_light"
+        android:layout_above="@+id/turnoff"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
 
     <Button
         android:text="Set Alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/clock"
+        android:id="@+id/setalarm"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp"
-        android:id="@+id/setalarm" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Turn Off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/setalarm"
+        android:id="@+id/turnoff"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp"
-        android:id="@+id/turnoff" />
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/stopbtn"
+        android:layout_toEndOf="@+id/stopbtn"
+        android:layout_marginLeft="74dp"
+        android:layout_marginStart="74dp"
+        android:layout_alignBottom="@+id/stopbtn" />
+
+    <Button
+        android:text="Stop Watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopbtn"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

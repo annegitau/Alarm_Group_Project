@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.efuabainson.mfaa.Forms"
+    android:background="?android:attr/colorControlHighlight">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none|text|textPersonName"
+        android:ems="10"
+        android:layout_marginTop="63dp"
+        android:id="@+id/fname"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/fname"
+        android:layout_alignEnd="@+id/fname"
+        android:layout_marginTop="27dp"
+        android:id="@+id/lname" />
+
+    <Button
+        android:text="Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:id="@+id/result"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textSize="18sp"
+        android:minWidth="100dip"
+        android:layout_marginStart="37dp"
+        android:layout_below="@+id/lname"
+        android:layout_alignStart="@+id/lname" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:layout_below="@+id/lname"
+        android:layout_alignEnd="@+id/result"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>
